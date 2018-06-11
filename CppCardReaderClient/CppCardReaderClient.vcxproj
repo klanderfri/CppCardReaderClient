@@ -90,11 +90,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)crlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)crlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)debugdll\*.dll" "$(TargetDir)" /Y
+xcopy /Y "$(ProjectDir)tessdata\eng.traineddata" "$(TargetDir)tessdata\"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -120,13 +126,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)crlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)crlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PreBuildEvent>
+      <Command>xcopy "$(ProjectDir)dll\*.dll" "$(TargetDir)" /Y
+xcopy /Y "$(ProjectDir)tessdata\eng.traineddata" "$(TargetDir)tessdata\"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -147,17 +159,78 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AlgorithmTestRunner.h" />
+    <ClInclude Include="ApplicationMessages.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="CardReaderApplication.h" />
+    <ClInclude Include="CardTestRunner.h" />
+    <ClInclude Include="Converter.h" />
+    <ClInclude Include="CRLibraryHelper.h" />
+    <ClInclude Include="crlib\CardReaderLibrary.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="FileHandling.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StoreCardProcessingData.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TestRunner.h" />
+    <ClInclude Include="TimePoint.h" />
+    <ClInclude Include="Toolbox.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlgorithmTestRunner.cpp" />
+    <ClCompile Include="ApplicationMessages.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="CardReaderApplication.cpp" />
+    <ClCompile Include="CardTestRunner.cpp" />
+    <ClCompile Include="Converter.cpp" />
     <ClCompile Include="CppCardReaderClient.cpp" />
+    <ClCompile Include="CRLibraryHelper.cpp" />
+    <ClCompile Include="FileHandling.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="StoreCardProcessingData.cpp" />
+    <ClCompile Include="TestRunner.cpp" />
+    <ClCompile Include="TimePoint.cpp" />
+    <ClCompile Include="Toolbox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="debugdll\boost_filesystem-vc141-mt-gd-x32-1_66.dll" />
+    <None Include="debugdll\boost_system-vc141-mt-gd-x32-1_66.dll" />
+    <None Include="debugdll\CardReaderLibrary.dll" />
+    <None Include="debugdll\gif.dll" />
+    <None Include="debugdll\jpeg62.dll" />
+    <None Include="debugdll\leptonica-1.74.4d.dll" />
+    <None Include="debugdll\libpng16d.dll" />
+    <None Include="debugdll\lzma.dll" />
+    <None Include="debugdll\opencv_core341d.dll" />
+    <None Include="debugdll\opencv_highgui341d.dll" />
+    <None Include="debugdll\opencv_imgcodecs341d.dll" />
+    <None Include="debugdll\opencv_imgproc341d.dll" />
+    <None Include="debugdll\opencv_videoio341d.dll" />
+    <None Include="debugdll\tiffd.dll" />
+    <None Include="debugdll\zlibd1.dll" />
+    <None Include="deployment\vcredist_x86.exe" />
+    <None Include="dll\boost_filesystem-vc141-mt-x32-1_66.dll" />
+    <None Include="dll\boost_system-vc141-mt-x32-1_66.dll" />
+    <None Include="dll\CardReaderLibrary.dll" />
+    <None Include="dll\gif.dll" />
+    <None Include="dll\jpeg62.dll" />
+    <None Include="dll\leptonica-1.74.4.dll" />
+    <None Include="dll\libpng16.dll" />
+    <None Include="dll\lzma.dll" />
+    <None Include="dll\opencv_core341.dll" />
+    <None Include="dll\opencv_imgcodecs341.dll" />
+    <None Include="dll\opencv_imgproc341.dll" />
+    <None Include="dll\tiff.dll" />
+    <None Include="dll\zlib1.dll" />
+    <None Include="tessdata\eng.traineddata" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="crlib\CardReaderLibrary.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

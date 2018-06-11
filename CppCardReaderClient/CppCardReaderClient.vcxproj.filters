@@ -1,33 +1,231 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Deployment">
+      <UniqueIdentifier>{355133be-9406-404b-ab01-4aa102dd8c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Testing">
+      <UniqueIdentifier>{746814dc-c936-4157-80eb-05372a4304e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\DLL">
+      <UniqueIdentifier>{cd1bef34-3745-495b-a0a7-88f30426051d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Containers">
+      <UniqueIdentifier>{65056aef-2b0a-4130-8d27-b4651e878a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Exceptions">
+      <UniqueIdentifier>{7c0ec233-2a9e-44b2-8f6f-dd74ee824ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Helpers">
+      <UniqueIdentifier>{ba9ac2b6-90f4-4662-804b-c161f18b6f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\DebugDLL">
+      <UniqueIdentifier>{93e4473f-8ee2-424a-9a0c-ffb71b7766e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Card Reading Library">
+      <UniqueIdentifier>{db8e3e84-147f-4d7f-a613-bb81e4392b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Tessdata">
+      <UniqueIdentifier>{57c0b11d-d095-4e37-be2a-578dbaafb95a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
+      <Filter>Application</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmTestRunner.h">
+      <Filter>Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="CardTestRunner.h">
+      <Filter>Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRunner.h">
+      <Filter>Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>Application\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="TimePoint.h">
+      <Filter>Application\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Application\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationMessages.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="CRLibraryHelper.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHandling.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreCardProcessingData.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Toolbox.h">
+      <Filter>Application\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="CardReaderApplication.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="crlib\CardReaderLibrary.h">
+      <Filter>Resource Files\Card Reading Library</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Application</Filter>
     </ClCompile>
     <ClCompile Include="CppCardReaderClient.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Application</Filter>
     </ClCompile>
+    <ClCompile Include="AlgorithmTestRunner.cpp">
+      <Filter>Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="CardTestRunner.cpp">
+      <Filter>Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRunner.cpp">
+      <Filter>Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Application\Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="TimePoint.cpp">
+      <Filter>Application\Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationMessages.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="CRLibraryHelper.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="FileHandling.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreCardProcessingData.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Toolbox.cpp">
+      <Filter>Application\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="CardReaderApplication.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="deployment\vcredist_x86.exe">
+      <Filter>Resource Files\Deployment</Filter>
+    </None>
+    <None Include="dll\boost_filesystem-vc141-mt-x32-1_66.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\boost_system-vc141-mt-x32-1_66.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\CardReaderLibrary.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\gif.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\jpeg62.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\leptonica-1.74.4.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\libpng16.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\lzma.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\opencv_core341.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\opencv_imgcodecs341.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\opencv_imgproc341.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\tiff.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="dll\zlib1.dll">
+      <Filter>Resource Files\DLL</Filter>
+    </None>
+    <None Include="debugdll\boost_filesystem-vc141-mt-gd-x32-1_66.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\boost_system-vc141-mt-gd-x32-1_66.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\CardReaderLibrary.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\gif.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\jpeg62.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\leptonica-1.74.4d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\libpng16d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\lzma.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\opencv_core341d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\opencv_highgui341d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\opencv_imgcodecs341d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\opencv_imgproc341d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\opencv_videoio341d.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\tiffd.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="debugdll\zlibd1.dll">
+      <Filter>Resource Files\DebugDLL</Filter>
+    </None>
+    <None Include="tessdata\eng.traineddata">
+      <Filter>Resource Files\Tessdata</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="crlib\CardReaderLibrary.lib">
+      <Filter>Resource Files\Card Reading Library</Filter>
+    </Library>
   </ItemGroup>
 </Project>
