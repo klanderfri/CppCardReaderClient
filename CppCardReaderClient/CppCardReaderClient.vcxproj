@@ -99,7 +99,7 @@
     </Link>
     <PreBuildEvent>
       <Command>xcopy "$(ProjectDir)debugdll\*.dll" "$(TargetDir)" /Y
-xcopy "$(ProjectDir)tessdata\*.traineddata" "$(OutDir)tessdata\" /Y</Command>
+xcopy "$(ProjectDir)tessdata\*.traineddata" "$(TargetDir)tessdata\" /Y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -137,7 +137,7 @@ xcopy "$(ProjectDir)tessdata\*.traineddata" "$(OutDir)tessdata\" /Y</Command>
     </Link>
     <PreBuildEvent>
       <Command>xcopy "$(ProjectDir)dll\*.dll" "$(TargetDir)" /Y
-xcopy "$(ProjectDir)tessdata\*.traineddata" "$(OutDir)tessdata\" /Y</Command>
+xcopy "$(ProjectDir)tessdata\*.traineddata" "$(TargetDir)tessdata\" /Y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
