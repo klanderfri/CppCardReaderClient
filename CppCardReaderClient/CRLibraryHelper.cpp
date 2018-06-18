@@ -3,7 +3,7 @@
 #include "CardReaderLibrary.h"
 
 using namespace CRLibrary;
-using namespace std;;
+using namespace std;
 
 CRLibraryHelper::CRLibraryHelper()
 {
