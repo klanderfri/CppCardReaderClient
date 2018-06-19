@@ -15,11 +15,11 @@ public:
 
 private:
 
-
+	//Reads the card titles of all the specified image files.
 	std::vector<Card> readAllCards(std::vector<std::wstring> filepathsOfImages);
-
+	//Extracts the card data from the reading result string.
 	std::vector<Card> extractCardData(std::string readDataOutput);
-	
+	//Creates the input string parameter for the card reading method.
 	std::string createReadingParameter(std::vector<std::wstring> filepathsOfImages);
 	//Removes lingering old data from previous runs.
 	void removeOldData();
@@ -30,7 +30,7 @@ private:
 
 	//Object holding methods printing messages for the application.
 	ApplicationMessages* messages;
-
+	//Pointer to object holding useful methods.
 	Toolbox* toolbox;
 };
 

@@ -23,10 +23,11 @@ public:
 	//The file path of a specific image to decode.
 	std::wstring filePathToImageToDecode;
 
+	//Pointer to object handling conversions.
 	Converter* converter;
-
+	//Pointer to object storing data to disk files.
 	StoreCardProcessingData* resultStorer;
-
+	//Pointer to the library for reading cards.
 	CRLibraryHelper* cardReader;
 
 private:

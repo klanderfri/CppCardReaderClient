@@ -23,9 +23,9 @@ public:
 	static bool CreateFileDirectory(std::wstring fullFolderPath);
 	//Compares two file names.
 	static double CompareFilenames(std::wstring filename1, std::wstring filename2);
-
+	//Gets the path to the user picture folder .
 	static std::wstring GetUserPicturesFileDirectory();
-
+	//Gets the user name of the current user.
 	static std::wstring GetCurrentUserName();
 	//Extracts the filename from a file path.
 	static std::wstring GetFileNameFromFilePath(const std::wstring filePath);
@@ -41,6 +41,6 @@ private:
 	static std::mutex m_fileLock;
 	//A lock preventing multiple threads from creating the same folder.
 	static std::mutex m_createFolderLock;
-
+	//Cache holding the user name of the current user.
 	static std::wstring cache_currentUserName;
 };
