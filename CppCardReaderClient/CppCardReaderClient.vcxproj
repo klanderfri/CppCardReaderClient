@@ -234,9 +234,7 @@ xcopy "$(ProjectDir)tessdata\*.traineddata" "$(TargetDir)tessdata\" /Y</Command>
     <None Include="dll\opencv_imgproc341.dll" />
     <None Include="dll\tiff.dll" />
     <None Include="dll\zlib1.dll" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="tessdata\eng.traineddata" />
   </ItemGroup>
   <ItemGroup>
