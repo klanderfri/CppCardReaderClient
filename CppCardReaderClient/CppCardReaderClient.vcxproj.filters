@@ -222,6 +222,7 @@
     <None Include="tessdata\eng.traineddata">
       <Filter>Resource Files\Tessdata</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="crlib\CardReaderLibrary.lib">
